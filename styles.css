@@ -1,10 +1,78 @@
+/* General Styles */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
+a {
+  color: #1C9C94;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+article {
+  padding:0 1em;
+}
+
+section{
+  margin: 1em;
+  padding: 1em;
+}
+
+/* Header Styles */
+header {
+    background-color: #7f71bd;
+    background-size: cover;
+    background-position: fixed;
+    color: white;
+    padding: 2em ;
+    text-align: center;
+}
+header img {
+    border-radius: 50%;
+    max-width: 150px;
+  }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Container Styling */
 .container {
     max-width: 800px;
     margin: 30px auto;
@@ -12,23 +80,49 @@ body {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-h1, h2 {
-    color: #150659;
+
+/* Section Styles */
+h2 {
+    color: #3b13ed;
+    border-bottom: 2px solid #3b13ed;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
-p {
-    margin: 10px 0;
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
 }
+
+ul li, dl dt {
+    margin-bottom: 10px;
+}
+
+/* Contact and Social Links */
 .contact-info, .social-links {
     margin: 20px 0;
 }
+
 .contact-info li, .social-links li {
     list-style: none;
     margin: 5px 0;
 }
+
 .social-links a {
     text-decoration: none;
     color: #0073b1;
 }
+
 .social-links a:hover {
     text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #3b13ed;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
 }
