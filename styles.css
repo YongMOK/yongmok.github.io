@@ -1,5 +1,4 @@
 /* General Styles */
-
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
@@ -7,30 +6,13 @@ body {
     margin: 0;
     padding: 0;
 }
-a {
-  color: #1C9C94;
-  text-decoration: none;
-}
-
-a:hover {
-  opacity: 0.5;
-}
-
-article {
-  padding:0 1em;
-}
-
-section{
-  margin: 1em;
-  padding: 1em;
-}
 
 /* Header Styles */
 header {
-    background-color: #7f71bd;
+    background-color: rgb(71, 34, 102);
     background-size: cover;
     background-position: fixed;
-    color: white;
+    color: rgb(247, 241, 241);
     padding: 2em ;
     text-align: center;
 }
