@@ -1,134 +1,455 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yong MOK - CV</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Yong MOK - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .section-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: #3b82f6;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <div class="navbar">
-            <h1>Yong MOK</h1>
-            <nav>
-                <ul>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#awards">Awards</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div>
-                <img src="./image/Yong.jpeg" />
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-blue-600">Yong MOK</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
+                    <a href="#education" class="text-gray-700 hover:text-blue-600 transition">Education</a>
+                    <a href="#experience" class="text-gray-700 hover:text-blue-600 transition">Experience</a>
+                    <a href="#research" class="text-gray-700 hover:text-blue-600 transition">Research</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <button class="md:hidden">
+                    <i data-feather="menu"></i>
+                </button>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <div class="container">
-        <section id="about">
-            <p>I am a 3rd year student at École Polytechnique, specializing in Data Science and Artificial Intelligence.</p>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center pt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Yong MOK</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold text-blue-600 mb-6">Data Science & AI Student</h2>
+                <p class="text-lg text-gray-600 mb-8">3rd year student at École Polytechnique specializing in Data Science and Artificial Intelligence.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Contact Me</a>
+                    <a href="#research" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition">My Research</a>
+                </div>
+            </div>
+            <div data-aos="fade-left" class="flex justify-center">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                        <img src="./image/Yong.jpeg" alt="Yong MOK" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg">
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                            <span class="text-sm font-medium">Available for opportunities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li><b>Sep 2022 – April 2025</b>: <strong>École Polytechnique</strong>, Palaiseau, France.</li>
-                <dl>
-                    <dt>- Engineering degree (M1) in Data Science and Artificial Intelligence.</dt>
-                    <dt>- Key Courses: Statistics, Data Visualization, Machine Learning, Deep Learning, Reinforcement Learning, Natural Language Processing, Big Data Systems.</dt>
-                    <dt>- Scholarship: Eiffel Excellence Scholarship.</dt>
-                </dl>
-                <li><b>Nov 2019 – Aug 2022</b>: <strong>Institute of Technology of Cambodia</strong>, Phnom Penh, Cambodia.</li>
-                <dl>
-                    <dt>- Intensive three-year program focused on Mathematics, Physics, and Computer Science.</dt>
-                    <dt>- Scholarship: Scholarship of Ministry of Education of Cambodia.</dt>
-                </dl>
-            </ul>
-        </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div data-aos="fade-up" class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    I am passionate about leveraging data science and artificial intelligence to solve complex problems. 
+                    Currently pursuing my engineering degree at École Polytechnique with a focus on machine learning, 
+                    deep learning, and big data systems. Eiffel Excellence Scholarship recipient.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-50 p-8 rounded-xl">
+                    <div class="text-blue-600 mb-4">
+                        <i data-feather="award" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Achievements</h3>
+                    <p class="text-gray-600">
+                        Silver Medal in Physics, High Distinction at Cambodian Baccalaureate (99.919), Eiffel Excellence Scholarship.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-50 p-8 rounded-xl">
+                    <div class="text-blue-600 mb-4">
+                        <i data-feather="globe" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Languages</h3>
+                    <p class="text-gray-600">
+                        Native Khmer, Proficient in French (B2-C1), Fluent in English.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-50 p-8 rounded-xl">
+                    <div class="text-blue-600 mb-4">
+                        <i data-feather="activity" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Interests</h3>
+                    <p class="text-gray-600">
+                        Competitive Boxing (Silver Medal at Coupe de l'X), Volleyball, Reading academic articles, Painting.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            <ul>
-                <li><b>June 2024 – Aug 2024</b>: <strong>Data Science and Machine Learning Intern</strong>, Paris Partners Softwares, Courbevoie, France.</li>
-                <dl>
-                    <dt>- Developed predictive Machine Learning models (classification, SVM, Ridge Regression, Decision Trees, Random Forests, SLFN, CNN) to forecast average price movements from Limit Order Books.</dt>
-                    <dt>- Built a web platform enabling users to train and test models and visualize data without requiring coding expertise.</dt>
-                </dl>
-                <li><b>Sep 2020 – Aug 2022</b>: <strong>Math and Physics Tutor</strong>, Institute of Technology of Cambodia, Phnom Penh, Cambodia.</li>
-                <dl>
-                    <dt>- Supported first- and second-year students in mastering mathematics and physics concepts.</dt>
-                    <dt>- Conducted targeted preparation sessions for Polytechnique oral exams.</dt>
-                </dl>
-            </ul>
-        </section>
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div data-aos="fade-up" class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Education</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+            </div>
+            <div class="space-y-8 relative before:absolute before:top-0 before:bottom-0 before:w-1 before:bg-blue-200 before:left-4 md:before:left-1/2 before:-ml-1">
+                <!-- Item 1 -->
+                <div data-aos="fade-right" class="relative pl-12 md:pl-0 md:pr-12 md:w-1/2 ml-auto">
+                    <div class="section-card p-8 rounded-xl shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">2022 - 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">École Polytechnique</h3>
+                        <p class="text-blue-600 font-medium mb-4">Engineering degree (M1) in Data Science and AI</p>
+                        <p class="text-gray-600 mb-4">Palaiseau, France</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                                <span>Key Courses: Statistics, Data Visualization, Machine Learning, Deep Learning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                                <span>Reinforcement Learning, Natural Language Processing, Big Data Systems</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="award" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                                <span>Scholarship: Eiffel Excellence Scholarship</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div data-aos="fade-left" class="relative pl-12 md:pl-12 md:w-1/2">
+                    <div class="section-card p-8 rounded-xl shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">2019 - 2022</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Institute of Technology of Cambodia</h3>
+                        <p class="text-blue-600 font-medium mb-4">Intensive program in Mathematics, Physics, and Computer Science</p>
+                        <p class="text-gray-600 mb-4">Phnom Penh, Cambodia</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                                <span>Focused on advanced mathematics, physics, and computer science</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="award" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                                <span>Scholarship: Ministry of Education of Cambodia</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="research">
-            <h2>Research Experience</h2>
-            <ul>
-                <li><b>Aug 2023 – April 2024</b>: <strong>Scientific Research Project (PSC)</strong>, Center of Applied Mathematics (CMAP).</li>
-                <dl>
-                    <dt>- Project: Robustness of High-Dimensional Models.</dt>
-                    <dt>- Grade: 18/20.</dt>
-                    <dt>- Analyzed the robustness of AI models (Linear Regression, SVM, Neural Networks) against attacks such as label-flipping and gradient poisoning in a year-long research project with a team of 4 students.</dt>
-                    <dt>- Developed a novel attack strategy combining gradient poisoning and label-flipping, advancing AI model security research.</dt>
-                </dl>
-            </ul>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Languages:</strong> Native Khmer, Proficient in French (B2-C1), Fluent in English.</li>
-                <li><strong>Technical Skills:</strong>
-                    <ul>
-                        <li>Programming Languages: HTML, JavaScript, C/C++, Java, Python, SQL.</li>
-                        <li>Libraries/Frameworks: NumPy, Pandas, Matplotlib, SciPy, scikit-learn, Keras, Pythorch.</li>
-                        <li>Tools: GitHub, VS Code, Jira.</li>
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div data-aos="fade-up" class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Professional Experience</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Experience 1 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="section-card p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">June 2024 - Aug 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Data Science and Machine Learning Intern</h3>
+                    <p class="text-blue-600 font-medium mb-4">Paris Partners Softwares, Courbevoie, France</p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i data-feather="chevron-right" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                            <span>Developed predictive ML models (classification, SVM, Ridge Regression, Decision Trees, Random Forests, SLFN, CNN) for price forecasting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="chevron-right" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                            <span>Built a web platform enabling users to train/test models and visualize data without coding</span>
+                        </li>
                     </ul>
-                </li>
-            </ul>
-        </section>
-
-        <section id="awards">
-            <h2>Awards and Volunteering</h2>
-            <ul>
-                <li><strong>Awards:</strong>
-                    <ul>
-                        <li>Silver Medal in Physics (Cambodia National Excellence Student Competition, 2019).</li>
-                        <li>Graduated with High Distinction at the Cambodian Baccalaureate (99.919).</li>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="section-card p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">Sep 2020 - Aug 2022</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Math and Physics Tutor</h3>
+                    <p class="text-blue-600 font-medium mb-4">Institute of Technology of Cambodia, Phnom Penh</p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i data-feather="chevron-right" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                            <span>Supported first- and second-year students in mastering mathematics and physics concepts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="chevron-right" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                            <span>Conducted targeted preparation sessions for Polytechnique oral exams</span>
+                        </li>
                     </ul>
-                </li>
-                <li><strong>Volunteering:</strong>
-                    <ul>
-                        <li>President of XKhmer Student Association.</li>
-                        <li>Active Member of the Khmer Polytechnicians Association (AXK).</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="interests">
-            <h2>Interests</h2>
-            <ul>
-                <li><strong>Sports:</strong> Competitive Boxing (Silver Medal at Coupe de l'X), Volleyball.</li>
-                <li><strong>Hobbies:</strong> Reading academic articles, painting.</li>
-            </ul>
-        </section>
+    <!-- Research Section -->
+    <section id="research" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div data-aos="fade-up" class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Research Experience</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+            </div>
+            <div data-aos="fade-up" class="section-card p-8 rounded-xl shadow-sm max-w-4xl mx-auto">
+                <div class="flex items-center mb-4">
+                    <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">Aug 2023 - April 2024</span>
+                    <span class="ml-4 bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full">Grade: 18/20</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Scientific Research Project (PSC)</h3>
+                <p class="text-blue-600 font-medium mb-4">Center of Applied Mathematics (CMAP)</p>
+                <h4 class="font-semibold text-gray-700 mb-3">Project: Robustness of High-Dimensional Models</h4>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-start">
+                        <i data-feather="chevron-right" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                        <span>Analyzed the robustness of AI models (Linear Regression, SVM, Neural Networks) against attacks</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="chevron-right" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                        <span>Focused on label-flipping and gradient poisoning attacks in a year-long research project</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="chevron-right" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                        <span>Developed a novel attack strategy combining gradient poisoning and label-flipping</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="chevron-right" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                        <span>Worked with a team of 4 students to advance AI model security research</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <ul>
-                <li>📧 <a href="mailto:yong.mok@polytechnique.edu">yong.mok@polytechnique.edu</a></li>
-                <li>🌐 <a href="https://linkedin.com/in/yongmok" target="_blank">linkedin.com/in/yongmok</a></li>
-                <li>🌐 <a href="https://github.com/yongmok" target="_blank">github.com/yongmok</a></li>
-            </ul>
-        </section>
-    </div>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div data-aos="fade-up" class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Skills</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Technical Skills -->
+                <div data-aos="fade-up" data-aos-delay="100" class="section-card p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i data-feather="code" class="w-6 h-6 text-blue-600 mr-3"></i>
+                        Technical Skills
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-700 mb-3">Programming Languages</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">C/C++</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Java</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">JavaScript</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">HTML</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-700 mb-3">Libraries/Frameworks</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">NumPy</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Pandas</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Matplotlib</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SciPy</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">scikit-learn</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Keras</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">PyTorch</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-700 mb-3">Tools</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">GitHub</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">VS Code</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Jira</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Awards & Volunteering -->
+                <div data-aos="fade-up" data-aos-delay="200" class="section-card p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i data-feather="award" class="w-6 h-6 text-blue-600 mr-3"></i>
+                        Awards & Volunteering
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-700 mb-3">Awards</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i data-feather="star" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                                    <span>Silver Medal in Physics (Cambodia National Excellence Student Competition, 2019)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="star" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                                    <span>Graduated with High Distinction at the Cambodian Baccalaureate (99.919)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-700 mb-3">Volunteering</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i data-feather="users" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                                    <span>President of XKhmer Student Association</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="users" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                                    <span>Active Member of the Khmer Polytechnicians Association (AXK)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 Yong MOK. All rights reserved.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div data-aos="fade-up" class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    I'm always open to discussing new opportunities, collaborations, or just chatting about data science and AI.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-right" class="section-card p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                                <i data-feather="mail" class="w-5 h-5 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-700">Email</h4>
+                                <a href="mailto:yong.mok@polytechnique.edu" class="text-blue-600 hover:underline">yong.mok@polytechnique.edu</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                                <i data-feather="linkedin" class="w-5 h-5 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-700">LinkedIn</h4>
+                                <a href="https://linkedin.com/in/yongmok" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/yongmok</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                                <i data-feather="github" class="w-5 h-5 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-700">GitHub</h4>
+                                <a href="https://github.com/yongmok" target="_blank" class="text-blue-600 hover:underline">github.com/yongmok</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="section-card p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Send Me a Message</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2024 Yong MOK. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="mailto:yong.mok@polytechnique.edu" class="hover:text-blue-400 transition">
+                        <i data-feather="mail" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yongmok" target="_blank" class="hover:text-blue-400 transition">
+                        <i data-feather="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://github.com/yongmok" target="_blank" class="hover:text-blue-400 transition">
+                        <i data-feather="github" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+    </script>
 </body>
 </html>
