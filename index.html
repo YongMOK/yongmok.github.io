@@ -52,32 +52,66 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-gradient min-h-screen flex items-center pt-16">
+    <section 
+    class="hero-gradient min-h-screen flex items-center pt-16" 
+    aria-labelledby="hero-heading"
+    >
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left Column: Text -->
             <div data-aos="fade-right">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Yong MOK</h1>
-                <h2 class="text-2xl md:text-3xl font-semibold text-blue-600 mb-6">Data Science & AI Student</h2>
-                <p class="text-lg text-gray-600 mb-8">3rd year student at École Polytechnique specializing in Data Science and Artificial Intelligence.</p>
-                <div class="flex space-x-4">
-                    <a href="#contact" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Contact Me</a>
-                    <a href="#research" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition">My Research</a>
+                <h1 id="hero-heading" class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Yong MOK
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold text-blue-600 mb-6">
+                    Data Science &amp; AI Student
+                </h2>
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">
+                    <span class="text-gray-700">X · Télécom · ITC</span>
+                </h3>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    Hi! I’m Yong, a Master 2 student at Télécom Paris with interests in 
+                    <span class="font-medium text-gray-800">Machine Learning, AI, and Data Science</span>.
+                </p>
+
+                <div class="flex space-x-6 center">
+                    <a href="mailto:yong.mok@polytechnique.edu" class="hover:text-blue-400 transition">
+                        <i data-feather="mail" class="w-5 h-5 text-blue-600"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yongmok" target="_blank" class="hover:text-blue-400 transition">
+                        <i data-feather="linkedin" class="w-5 h-5 text-blue-600"></i>
+                    </a>
+                    <a href="https://github.com/yongmok" target="_blank" class="hover:text-blue-400 transition">
+                        <i data-feather="github" class="w-5 h-5 text-blue-600"></i>
+                    </a>
                 </div>
             </div>
+
+            <!-- Right Column: Image -->
             <div data-aos="fade-left" class="flex justify-center">
                 <div class="relative">
+                    <!-- Profile Image -->
                     <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
-                        <img src="./image/Yong.jpeg" alt="Yong MOK" class="w-full h-full object-cover">
+                        <img 
+                            src="./image/Yong.jpeg" 
+                            alt="Portrait of Yong MOK" 
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                        >
                     </div>
-                    <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg">
-                        <div class="flex items-center">
-                            <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-                            <span class="text-sm font-medium">Available for opportunities</span>
-                        </div>
+
+                    <!-- Availability Badge -->
+                    <div class="absolute -bottom-4 -right-4 bg-white px-4 py-2 rounded-lg shadow-lg flex items-center">
+                        <span class="w-3 h-3 bg-green-500 rounded-full mr-2" aria-hidden="true"></span>
+                        <span class="text-sm font-medium text-gray-700">Available for opportunities</span>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
+
+
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-white">
@@ -86,9 +120,9 @@
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">About Me</h2>
                 <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    I am passionate about leveraging data science and artificial intelligence to solve complex problems. 
-                    Currently pursuing my engineering degree at École Polytechnique with a focus on machine learning, 
-                    deep learning, and big data systems. Eiffel Excellence Scholarship recipient.
+                    I am passionated about leveraging data science and artificial intelligence to solve complex problems. 
+                    Currently pursuing master 2 degree at Télécom Paris with a focus on machine learning, 
+                    deep learning, and big data systems.
                 </p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
@@ -98,7 +132,12 @@
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Achievements</h3>
                     <p class="text-gray-600">
-                        Silver Medal in Physics, High Distinction at Cambodian Baccalaureate (99.919), Eiffel Excellence Scholarship.
+                        <ul>
+                            <li><strong>- 2019 : </strong><span>Silver Medal in Physics (Cambodia National Excellence Student Competition).</span></li>
+                            <li><strong>- 2019 : </strong><span>Grade A in the Cambodian Baccalaureate.</span></li>
+                            <li><strong>- 2019 : </strong><span>MOEYS Of Cambodia Scholarship.</span></li>
+                            <li><strong>- 2022 : </strong><span>Eiffel Excellence Scholarship recipient for studies at École Polytechnique.</span></li>
+                        </ul>
                     </p>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-50 p-8 rounded-xl">
@@ -106,9 +145,24 @@
                         <i data-feather="globe" class="w-8 h-8"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Languages</h3>
-                    <p class="text-gray-600">
-                        Native Khmer, Proficient in French (B2-C1), Fluent in English.
-                    </p>
+                    <div class="mb-3">
+                        <p class="text-gray-600">Khmer (Native)</p>
+                        <div style="background-color: #e5e7eb; border-radius: 10px; height: 10px; width: 100%;">
+                            <div style="background-color: #3b82f6; height: 10px; width: 100%; border-radius: 10px;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <p class="text-gray-600">French (B2-C1)</p>
+                        <div style="background-color: #e5e7eb; border-radius: 10px; height: 10px; width: 100%;">
+                            <div style="background-color: #3b82f6; height: 10px; width: 75%; border-radius: 10px;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <p class="text-gray-600">English (B2-C1)</p>
+                        <div style="background-color: #e5e7eb; border-radius: 10px; height: 10px; width: 100%;">
+                            <div style="background-color: #3b82f6; height: 10px; width: 90%; border-radius: 10px;"></div>
+                        </div>
+                    </div>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-50 p-8 rounded-xl">
                     <div class="text-blue-600 mb-4">
@@ -116,7 +170,7 @@
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Interests</h3>
                     <p class="text-gray-600">
-                        Competitive Boxing (Silver Medal at Coupe de l'X), Volleyball, Reading academic articles, Painting.
+                        Competitive Boxing (Silver Medal at Coupe de l'X) - Volleyball - Reading academic articles - .....
                     </p>
                 </div>
             </div>
@@ -135,6 +189,23 @@
                 <div data-aos="fade-right" class="relative pl-12 md:pl-0 md:pr-12 md:w-1/2 ml-auto">
                     <div class="section-card p-8 rounded-xl shadow-sm">
                         <div class="flex items-center mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">September 2025 - March 2027</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Télécom Paris</h3>
+                        <p class="text-blue-600 font-medium mb-4">Double Engineering degree X-Télécom (Master 2) in AI</p>
+                        <p class="text-gray-600 mb-4">Palaiseau, France</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
+                                <span>Key Courses: Statistics, Probabilistic, Machine Learning, Deep Learning, NLP, Computer Vision and more topic.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div data-aos="fade-left" class="relative pl-12 md:pl-12 md:w-1/2">
+                    <div class="section-card p-8 rounded-xl shadow-sm">
+                        <div class="flex items-center mb-4">
                             <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">2022 - 2025</span>
                         </div>
                         <h3 class="text-xl font-bold text-gray-800 mb-2">École Polytechnique</h3>
@@ -143,11 +214,7 @@
                         <ul class="space-y-2 text-gray-600">
                             <li class="flex items-start">
                                 <i data-feather="check" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
-                                <span>Key Courses: Statistics, Data Visualization, Machine Learning, Deep Learning</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i data-feather="check" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
-                                <span>Reinforcement Learning, Natural Language Processing, Big Data Systems</span>
+                                <span>Key Courses: Statistics, Data Visualization, Machine Learning, Deep Learning, Reinforcement Learning, NLP, Big Data Systems.</span>
                             </li>
                             <li class="flex items-start">
                                 <i data-feather="award" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
@@ -157,8 +224,8 @@
                     </div>
                 </div>
                 
-                <!-- Item 2 -->
-                <div data-aos="fade-left" class="relative pl-12 md:pl-12 md:w-1/2">
+                <!-- Item 3 -->
+                <div data-aos="fade-right" class="relative pl-12 md:pl-0 md:pr-12 md:w-1/2 ml-auto">
                     <div class="section-card p-8 rounded-xl shadow-sm">
                         <div class="flex items-center mb-4">
                             <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">2019 - 2022</span>
@@ -169,7 +236,7 @@
                         <ul class="space-y-2 text-gray-600">
                             <li class="flex items-start">
                                 <i data-feather="check" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
-                                <span>Focused on advanced mathematics, physics, and computer science</span>
+                                <span>Focused on mathematics, physics, and computer science</span>
                             </li>
                             <li class="flex items-start">
                                 <i data-feather="award" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
@@ -200,11 +267,11 @@
                     <ul class="space-y-3 text-gray-600">
                         <li class="flex items-start">
                             <i data-feather="chevron-right" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
-                            <span>Developed predictive ML models (classification, SVM, Ridge Regression, Decision Trees, Random Forests, SLFN, CNN) for price forecasting</span>
+                            <span>Developed predictive ML models (classification, SVM, Ridge Regression, Decision Trees, Random Forests, SLFN, CNN) for Limit-Order Book forecasting.</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="chevron-right" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
-                            <span>Built a web platform enabling users to train/test models and visualize data without coding</span>
+                            <span>Built a web platform enabling users to train/test models and visualize data without any coding requiement.</span>
                         </li>
                     </ul>
                 </div>
@@ -219,11 +286,11 @@
                     <ul class="space-y-3 text-gray-600">
                         <li class="flex items-start">
                             <i data-feather="chevron-right" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
-                            <span>Supported first- and second-year students in mastering mathematics and physics concepts</span>
+                            <span>Supported first- and second-year students in mastering foundation of mathematics and physics concepts.</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="chevron-right" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
-                            <span>Conducted targeted preparation sessions for Polytechnique oral exams</span>
+                            <span>Conducted targeted preparation sessions for Polytechnique oral exams.</span>
                         </li>
                     </ul>
                 </div>
@@ -253,15 +320,11 @@
                     </li>
                     <li class="flex items-start">
                         <i data-feather="chevron-right" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
-                        <span>Focused on label-flipping and gradient poisoning attacks in a year-long research project</span>
+                        <span>Focused on label-flipping and gradient poisoning attacks in a year-long research project in a group of 4</span>
                     </li>
                     <li class="flex items-start">
                         <i data-feather="chevron-right" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
                         <span>Developed a novel attack strategy combining gradient poisoning and label-flipping</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i data-feather="chevron-right" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
-                        <span>Worked with a team of 4 students to advance AI model security research</span>
                     </li>
                 </ul>
             </div>
@@ -291,7 +354,9 @@
                                 <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Java</span>
                                 <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
                                 <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">JavaScript</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">React</span>
                                 <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">HTML</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">CSS</span>
                             </div>
                         </div>
                         <div>
@@ -302,8 +367,11 @@
                                 <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Matplotlib</span>
                                 <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SciPy</span>
                                 <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">scikit-learn</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Keras</span>
                                 <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">PyTorch</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">TensorFlow</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Spark</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">...</span>
+
                             </div>
                         </div>
                         <div>
@@ -333,7 +401,7 @@
                                 </li>
                                 <li class="flex items-start">
                                     <i data-feather="star" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
-                                    <span>Graduated with High Distinction at the Cambodian Baccalaureate (99.919)</span>
+                                    <span>Graduated with High Distinction at the Cambodian Baccalaureate (Grade A)</span>
                                 </li>
                             </ul>
                         </div>
@@ -342,7 +410,7 @@
                             <ul class="space-y-2 text-gray-600">
                                 <li class="flex items-start">
                                     <i data-feather="users" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
-                                    <span>President of XKhmer Student Association</span>
+                                    <span>President of XKhmer Student Association, 2023-2024</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i data-feather="users" class="w-4 h-4 text-blue-600 mr-2 mt-1"></i>
@@ -399,22 +467,41 @@
                         </div>
                     </div>
                 </div>
+                <!-- Right Column (Form) -->
                 <div data-aos="fade-left" class="section-card p-8 rounded-xl shadow-sm">
                     <h3 class="text-xl font-bold text-gray-800 mb-6">Send Me a Message</h3>
-                    <form class="space-y-4">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
-                        </div>
-                        <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition w-full">Send Message</button>
+
+                    <form id="contact-form" action="https://formspree.io/f/xwpngppg" method="POST" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input name="name" id="name" type="text" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input name="email" id="email" type="email" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea name="message" id="message" rows="4" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    </div>
+
+                    <!-- Spam honeypot -->
+                    <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
+
+                    <!-- Optional subject -->
+                    <input type="hidden" name="_subject" value="New message from portfolio site">
+
+                    <button type="submit"
+                            class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition w-full">
+                        Send Message
+                    </button>
+
+                    <p id="form-status" class="text-sm mt-2 text-gray-600"></p>
                     </form>
                 </div>
             </div>
@@ -426,7 +513,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
-                    <p>&copy; 2024 Yong MOK. All rights reserved.</p>
+                    <p>&copy; 2024 Yong MOK And Chatgpt 😃. All rights reserved.</p>
                 </div>
                 <div class="flex space-x-6">
                     <a href="mailto:yong.mok@polytechnique.edu" class="hover:text-blue-400 transition">
@@ -450,6 +537,35 @@
             once: true
         });
         feather.replace();
+        
+        const form = document.getElementById('contact-form');
+        const statusEl = document.getElementById('form-status');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            statusEl.className = 'text-sm mt-2 text-gray-600';
+            statusEl.textContent = 'Sending...';
+
+            try {
+            const res = await fetch(form.action, {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(form)
+            });
+
+            if (res.ok) {
+                form.reset();
+                statusEl.className = 'text-sm mt-2 text-green-600';
+                statusEl.textContent = 'Thanks! Your message has been sent.';
+            } else {
+                statusEl.className = 'text-sm mt-2 text-red-600';
+                statusEl.textContent = 'Oops, something went wrong. Please try again.';
+            }
+            } catch {
+            statusEl.className = 'text-sm mt-2 text-red-600';
+            statusEl.textContent = 'Network error. Please try again.';
+            }
+        });
     </script>
 </body>
 </html>
